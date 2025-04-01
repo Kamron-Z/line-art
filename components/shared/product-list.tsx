@@ -6,7 +6,7 @@ import {Button} from "@/components/ui/button";
 
 interface Props {
   className?: string;
-  items: Item[];
+  items: any[];
   text: string;
 }
 

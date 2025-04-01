@@ -11,7 +11,7 @@ import {cn} from "@/lib/utils";
 interface Props {
   className?: string;
   label?: string;
-  items: Item[],
+  items: any[],
   separator?: boolean,
   children?: React.ReactNode,
 }

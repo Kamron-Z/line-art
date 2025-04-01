@@ -13,7 +13,7 @@ interface Props {
   title: string,
   iconUrl: string,
   defaultValue?: string,
-  navs: Item[]
+  navs: any[],
 }
 
 export const NavigatorMenuComp: React.FC<Props> = ({className, defaultValue, title, navs, iconUrl}) => {
@@ -23,7 +23,7 @@ export const NavigatorMenuComp: React.FC<Props> = ({className, defaultValue, tit
           <NavigationMenuItem>
             <NavigationMenuTrigger className={'gap-1.5'}>
                       <span>
-                        <img src={iconUrl}/>
+                        <img src={iconUrl} alt={"/"}/>
                       </span>
 
 
