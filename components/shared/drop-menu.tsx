@@ -9,7 +9,7 @@ import React from "react";
 import {cn} from "@/lib/utils";
 
 interface Item {
-  id: string;
+  id: number;
   title: string;
 }
 
