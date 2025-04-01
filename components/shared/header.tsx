@@ -25,34 +25,29 @@ interface Props {
 const navsVuesax = [{
   id: 1,
   title: "Общие вопросы",
+  pageUrl: '/about'
 }, {
   id: 2,
   title: "Машиностроение",
+  pageUrl: '/instagram'
 }, {
   id: 3,
   title: "Деревообработка",
+  pageUrl: '/'
 }]
 
 const navsHome = [{
   id: 1,
   title: "Общие вопросы",
+  pageUrl: '/'
 }, {
   id: 2,
   title: "Машиностроение",
+  pageUrl: '/'
 }, {
   id: 3,
   title: "Деревообработка",
-}]
-
-const navsArticle = [{
-  id: 1,
-  title: "Общие вопросы",
-}, {
-  id: 2,
-  title: "Машиностроение",
-}, {
-  id: 3,
-  title: "Деревообработка",
+  pageUrl: '/'
 }]
 
 export const Header: React.FC<Props> = ({className}) => {
@@ -67,9 +62,9 @@ export const Header: React.FC<Props> = ({className}) => {
             </Link>
             {/*nav*/}
             <div className={'flex items-center gap-6'}>
-              <NavigatorMenuComp title={'Библиотека'} navs={navsVuesax} iconUrl={'/images/vuesax.svg'}/>
-              <NavigatorMenuComp title={'Форум'} navs={navsHome} iconUrl={'/images/home-header.svg'}/>
-              <NavigatorMenuComp title={'Статьи'} navs={navsArticle} iconUrl={'/images/article-header.svg'}/>
+              <NavigatorMenuComp title={'Библиотека'} pageUrl={'library'} navs={navsVuesax} iconUrl={'/images/vuesax.svg'}/>
+              <NavigatorMenuComp title={'Форум'} pageUrl={'forum'} navs={navsHome} iconUrl={'/images/home-header.svg'}/>
+              <NavigatorMenuComp title={'Статьи'} pageUrl={'article'} iconUrl={'/images/article-header.svg'}/>
             </div>
             {/*search*/}
             <div className="relative min-w-[144px]">

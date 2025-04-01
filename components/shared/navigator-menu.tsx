@@ -7,43 +7,47 @@ import {
   NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
 import {cn} from "@/lib/utils";
+import Link from "next/link";
 
 interface Item {
   id: number;
-
   title: string;
+  pageUrl: string;
 }
 
 interface Props {
   className?: string,
   title: string,
-  iconUrl: string,
+  iconUrl?: string,
   defaultValue?: string,
-  navs: Item[],
+  navs?: Item[],
+  pageUrl?: string,
 }
 
 
-export const NavigatorMenuComp: React.FC<Props> = ({className, defaultValue, title, navs, iconUrl}) => {
+export const NavigatorMenuComp: React.FC<Props> = ({className, pageUrl, defaultValue, title, navs, iconUrl}) => {
   return (
-      <NavigationMenu className={cn(' ', className)}>
-        <NavigationMenuList>
+      <NavigationMenu  className={cn('cursor-pointer ', className)}>
+        <NavigationMenuList >
           <NavigationMenuItem>
-            <NavigationMenuTrigger className={'gap-1.5'}>
-                      <span>
-                        <img src={iconUrl} alt={"/"}/>
-                      </span>
+            <Link href={`/${pageUrl}`} >
+              <NavigationMenuTrigger  className={'gap-1.5'}>
+                {iconUrl && <span>
+                        <img src={iconUrl}/>
+                      </span>}
 
 
-              {defaultValue ? defaultValue : title}
+                {defaultValue ? defaultValue : title}
 
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className={''}>
+              </NavigationMenuTrigger>
+            </Link>
+            {navs && <NavigationMenuContent asChild={false} className={''}>
               {
                 navs.map((nav, index) => (
-                    <NavigationMenuLink className={'w-full'} key={index}>{nav.title}</NavigationMenuLink>
+                    <NavigationMenuLink href={nav.pageUrl}  className={'w-full'} key={index}>{nav.title}</NavigationMenuLink>
                 ))
               }
-            </NavigationMenuContent>
+            </NavigationMenuContent>}
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
