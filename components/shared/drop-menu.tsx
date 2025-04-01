@@ -8,10 +8,15 @@ import {
 import React from "react";
 import {cn} from "@/lib/utils";
 
+interface Item {
+  id: string;
+  title: string;
+}
+
 interface Props {
   className?: string;
   label?: string;
-  items: any[],
+  items: Item[],
   separator?: boolean,
   children?: React.ReactNode,
 }

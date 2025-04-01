@@ -8,13 +8,19 @@ import {
 } from "@/components/ui/navigation-menu";
 import {cn} from "@/lib/utils";
 
+interface Item {
+  id: string;
+  title: string;
+}
+
 interface Props {
   className?: string,
   title: string,
   iconUrl: string,
   defaultValue?: string,
-  navs: any[],
+  navs: Item[],
 }
+
 
 export const NavigatorMenuComp: React.FC<Props> = ({className, defaultValue, title, navs, iconUrl}) => {
   return (

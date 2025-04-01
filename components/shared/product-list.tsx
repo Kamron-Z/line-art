@@ -4,9 +4,16 @@ import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 
+interface Item {
+  id: number;
+  title: string;
+  suptitle: string;
+  imageUrl: string;
+}
+
 interface Props {
   className?: string;
-  items: any[];
+  items: Item[];
   text: string;
 }
 

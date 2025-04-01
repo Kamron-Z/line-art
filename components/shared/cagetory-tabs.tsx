@@ -1,5 +1,4 @@
 import {cn} from "@/lib/utils";
-import {DropMenu} from "@/components/shared/drop-menu";
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {NavigatorMenuComp} from "@/components/shared/navigator-menu";
