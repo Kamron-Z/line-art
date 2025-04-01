@@ -14,6 +14,7 @@ export const CategoryTabs: React.FC<Props> = ({className}) => {
         <Container className={'flex items-center justify-between'}>
           <div>
 
+
             <NavigatorMenuComp title={'TЕХНОЛОГИЧЕСКИЙ ФОРУМ'} defaultValue={'ТЕХНОЛОГИЧЕСКИЙ ФОРУМ'} navs={[{
               id: 1,
               title: "ТЕХНОЛОГИЧЕСКИЙ ФОРУМ",
