@@ -54,9 +54,9 @@ export default function Home() {
               Исследуйте, устанавливайте, используйте и изменяйте тысячи файлов и строк.
             </p>
           </div>
-
-          <CategoryTabs/>
-
+        </Container>
+        <CategoryTabs/>
+        <Container>
           <div><ProductList items={items} text={'Книги'}/>
             <ProductList items={items} text={'Курсы'}/>
             <ProductList items={items} text={'Чертежи'}/>
