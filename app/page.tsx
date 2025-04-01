@@ -1,6 +1,45 @@
-import {Header} from "@/components/shared/header";
 import {Container} from "@/components/shared/container";
+import {CategoryTabs} from "@/components/shared/cagetory-tabs";
+import {ProductList} from "@/components/shared/product-list";
 
+const items = [
+  {
+    id: 1,
+    title: 'Architecture in Britain, 1530-1830',
+    suptitle: 'Архитектурные решения',
+    imageUrl: '/images/kniga.png'
+  },
+  {
+    id: 2,
+    title: 'Architecture in Britain, 1530-1830',
+    suptitle: 'Архитектурные решения',
+    imageUrl: '/images/kniga.png'
+  },
+  {
+    id: 3,
+    title: 'Architecture in Britain, 1530-1830',
+    suptitle: 'Архитектурные решения',
+    imageUrl: '/images/kniga.png'
+  },
+  {
+    id: 4,
+    title: 'Architecture in Britain, 1530-1830',
+    suptitle: 'Архитектурные решения',
+    imageUrl: '/images/kniga.png'
+  },
+  {
+    id: 5,
+    title: 'Architecture in Britain, 1530-1830',
+    suptitle: 'Архитектурные решения',
+    imageUrl: '/images/kniga.png'
+  },
+  {
+    id: 6,
+    title: 'Architecture in Britain, 1530-1830',
+    suptitle: 'Архитектурные решения',
+    imageUrl: '/images/kniga.png'
+  },
+]
 
 export default function Home() {
   return (
@@ -14,6 +53,14 @@ export default function Home() {
             <p className={'text-xl text-[#9196A8]'}>
               Исследуйте, устанавливайте, используйте и изменяйте тысячи файлов и строк.
             </p>
+          </div>
+
+          <CategoryTabs/>
+
+          <div><ProductList items={items} text={'Книги'}/>
+            <ProductList items={items} text={'Курсы'}/>
+            <ProductList items={items} text={'Чертежи'}/>
+            <ProductList items={items} text={'Расчеты'}/>
           </div>
 
         </Container>

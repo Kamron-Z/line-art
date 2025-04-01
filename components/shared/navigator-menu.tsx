@@ -12,24 +12,28 @@ interface Props {
   className?: string,
   title: string,
   iconUrl: string,
+  defaultValue?: string,
   navs: Item[]
 }
 
-export const NavigatorMenuComp: React.FC<Props> = ({className, title, navs, iconUrl}) => {
+export const NavigatorMenuComp: React.FC<Props> = ({className, defaultValue, title, navs, iconUrl}) => {
   return (
-      <NavigationMenu className={cn('', className)}>
+      <NavigationMenu className={cn(' ', className)}>
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className={'gap-1.5'}>
                       <span>
                         <img src={iconUrl}/>
                       </span>
-              {title}
+
+
+              {defaultValue ? defaultValue : title}
+
             </NavigationMenuTrigger>
-            <NavigationMenuContent className={'w-full'}>
+            <NavigationMenuContent className={''}>
               {
                 navs.map((nav, index) => (
-                    <NavigationMenuLink key={index}>{nav.title}</NavigationMenuLink>
+                    <NavigationMenuLink className={'w-full'} key={index}>{nav.title}</NavigationMenuLink>
                 ))
               }
             </NavigationMenuContent>
