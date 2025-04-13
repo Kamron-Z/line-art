@@ -3,12 +3,12 @@ import {Title} from "@/components/shared/title";
 
 
 
-export default function Home() {
+export default function ForumPage() {
   return (
       <>
         <Container>
 
-         <Title text="Home Page" size={'lg'} />
+          <Title text="Forum Page" size={'lg'} />
 
         </Container>
 
